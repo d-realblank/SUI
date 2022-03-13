@@ -3,7 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SUI</title>
-    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="style_cart.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
@@ -32,12 +32,21 @@
         <h1>Shopping Cart</h1>
         
      <table class= "product-list">
+        <thead>
+			<tr>
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Options</th>
+			</tr>
+		</thead>
+         <tbody>
         <tr>
-            <td><img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" 
-                alt="Picture of carrots"/>Carrots</td>
-            <td>
+            <td data-label="Name"><img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" 
+                alt="Picture of carrots"/> <p>Carrots</p> </td>
+            <td data-label="Quantity">
                 <form action="">
-                    <p>Quantity</p> 
+                    
                     <select name="qty" id="quantity">
                         <option>1</option>
                         <option>2</option>
@@ -47,16 +56,11 @@
                     </select>
                 </form>
             </td>			
-            <td>4.36$</td>						
-            <td> <button type="submit" id = "delete">Delete</button></td>
+            <td data-label="Price">4.36$</td>						
+            <td data-label="Option"> <button type="submit" id = "delete">Delete</button></td>
         </tr>
-        <tr>
-            <td>To be Listed</td>
-            <td></td>			
-            <td></td>			
-            <td></td>			
-            <td></td>
-        </tr> 
+       
+    </tbody>
     </table> 
     </div>
 
@@ -66,23 +70,23 @@
         <table class = "bill">
             <tr>
                 <td>Number of Items:</td>
-                <td></td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Subtotal:</td>
-                <td></td>
+                <td>5.00$</td>
             </tr>
             <tr>
                 <td>Estimated HST:</td>
-                <td></td>
+                <td>5.00$</td>
             </tr>
             <tr>
                 <td>Estimated GST:</td>
-                <td></td>
+                <td>5.00$</td>
             </tr>
             <tr>
                 <td>Order Total:</td>
-                <td></td>
+                <td>5.00$</td>
             </tr>
         </table>    
     </div>

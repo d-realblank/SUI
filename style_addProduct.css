@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+ 
+ box-sizing: border-box;
+}
+
+body{
+ font-family: Verdana, sans-serif;
+ width: 100%;
+ height: 100%;
+ margin: 0px;
+ padding: 0px;
+ overflow-x: hidden; 
+}
+
+
+/*Header Start*/
+#header{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px 80px;
+ background-color: aliceblue;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+ position: sticky;
+ top: 0;
+ left: 0;
+}
+
+#logo{
+ color: #1a1a1a;
+ font-size: 35px;
+}
+
+#navbar{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#navbar li{
+ list-style: none;
+ padding: 0 20px;
+ position: relative;
+}
+
+#navbar li a{
+ text-decoration: none;
+ font-size: 16px;
+ font-weight: 600;
+ color: #1a1a1a;
+ transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+ color: #088178;  
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+ content: "";
+ width: 30%;
+ height: 2px;
+ background: #088178;
+ position: absolute;
+ bottom: -4px;
+ left: 20px;
+}
+
+#mobile{
+ display: none;
+ align-items: center;
+}
+
+#close {
+ display: none;
+}
+
+
+.add-page{
+ width: 100%;
+ margin: 3% 10% 0;
+ 
+}
+.form{
+ width: 60%;
+ height: 75%;
+ margin: 3% 3% 0;
+
+}
+
+#back-arrow{
+ padding: 10px;
+}
+.form label{
+ width: 100%;
+ margin: 25px;
+ font-size: 20pt;
+}
+.form input[type=text], input[type=submit], textarea{
+ width: 95%;
+ height: 40px;
+ 
+ margin-left: 2%;
+ margin-right: 2%;
+ margin-top: 1%;
+ margin-bottom: 2%;
+ border: 1px solid rgb(0, 0, 0);
+ border-radius: 4px;
+}
+.form input[type=text]{
+ height: 5%;
+ font-size: 15pt;
+ border-radius: 2px;
+}
+.form textarea{
+ height: 20%;
+ font-size: 15pt;
+}
+
+.form input[type=submit]{
+ background-color: #3f9242;
+ color: white;
+ font-size: 20pt;
+ cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+ background-color: #45a049;
+}
+
+
+/*Media Query*/
+
+@media (max-width: 600px){
+ .form label{
+  width: 100%;
+  margin: 25px;
+  font-size: 15pt;
+ }
+}
+
+@media (max-width:799px){
+ #navbar{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: flex-start;
+     position: fixed;
+     top: 0;
+     right: -300px;
+     height: 100vh;
+     width: 300px;
+     background-color: #E3E6F3;
+     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+     padding: 80px 0 0 10px;
+     transition: 0.3s;
+ }
+
+ #navbar.active{
+     right: 0;
+ }
+
+ #navbar li{
+     margin-bottom: 25px;
+ }
+
+ #mobile{
+     display: flex;
+     align-items: center;
+ }
+
+ #mobile i{
+     color: #1a1a1a;
+     font-size: 24px;
+     padding-left: 20px;
+ }
+
+ #close{
+     display: initial;
+     position: absolute;
+     top: 30px;
+     left: 30px;
+     color: #222;
+     font-size: 24px;
+ }
+
+ #sh-bag{
+     display: none;
+ }
+
+}
+
+@media (max-width: 477px) {
+ #header {
+     padding: 10px 30px;
+ }
+}
