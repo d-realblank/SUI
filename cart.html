@@ -27,69 +27,73 @@
         </div>
     </section>
 
-
+    
     <div class="listing">
         <h1>Shopping Cart</h1>
         
-     <table class= "product-list">
+     <table id= "product-list">
         <thead>
 			<tr>
 				<th>Name</th>
 				<th>Quantity</th>
 				<th>Price</th>
-				<th>Options</th>
+				<th>Option</th>
 			</tr>
 		</thead>
          <tbody>
         <tr>
             <td data-label="Name"><img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" 
-                alt="Picture of carrots"/> <p>Carrots</p> </td>
-            <td data-label="Quantity">
-                <form action="">
-                    
-                    <select name="qty" id="quantity">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </form>
-            </td>			
-            <td data-label="Price">4.36$</td>						
-            <td data-label="Option"> <button type="submit" id = "delete">Delete</button></td>
+                alt="Picture of carrots"/> Carrots </td>
+            <td data-label="Quantity"><button id = "substract" onclick="substract(this)">-</button> 2 <button id = "add" onclick="add(this)">+</button> </td>			
+            <td data-label="Price">4.35$</td>						
+            <td data-label="Option"> <button id = "delete" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td data-label="Name"><img src="img/oreo.jpg" 
+                alt="Picture of oreo"/>Oreo</td>
+            <td data-label="Quantity"><button id = "substract" onclick="substract(this)">-</button> 5 <button id = "add" onclick="add(this)">+</button> </td>			
+            <td data-label="Price">5.25$</td>						
+            <td data-label="Option"> <button id = "delete" onclick="deleteRow(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td data-label="Name"><img src="img/chicken.jpg" 
+                alt="Picture of chicken"/>Chicken</td>
+            <td data-label="Quantity"><button id = "substract" onclick="substract(this)">-</button> 7 <button id = "add" onclick="add(this)">+</button> </td>			
+            <td data-label="Price">7.00$</td>						
+            <td data-label="Option"> <button id = "delete" onclick="deleteRow(this)">Delete</button></td>
         </tr>
        
     </tbody>
     </table> 
     </div>
-
-    </body>
+   
     <div class="total">
         <h1><u>Order Summary</u></h1>
-        <table class = "bill">
+        <table id = "bill">
             <tr>
                 <td>Number of Items:</td>
-                <td>5</td>
+                <td id = "totalItems"></td>
             </tr>
             <tr>
                 <td>Subtotal:</td>
-                <td>5.00$</td>
+                <td id = "subtotal"></td>
             </tr>
             <tr>
-                <td>Estimated HST:</td>
-                <td>5.00$</td>
+                <td>Estimated QST:</td>
+                <td id = "qst">5.00$</td>
             </tr>
             <tr>
                 <td>Estimated GST:</td>
-                <td>5.00$</td>
+                <td id = "gst"></td>
             </tr>
             <tr>
                 <td>Order Total:</td>
-                <td>5.00$</td>
+                <td id = "total"></td>
             </tr>
         </table>    
     </div>
+    <script src="script.js"></script>
+    <script src="script_cart.js"></script>
     
     </body>
     </html>

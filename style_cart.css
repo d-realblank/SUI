@@ -93,7 +93,7 @@ body{
  font-weight: bold;
  /*border-style: solid;*/
 }
-.product-list {
+#product-list {
  border-collapse: collapse;
  margin-top: 2%;
  font-size: 20pt;
@@ -103,43 +103,43 @@ body{
  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 
 }
-.product-list thead tr {
+#product-list thead tr {
     background-color: #046d04;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
    }
-   .product-list th, td{
+   #product-list th, td{
     padding: 10px 14px;
    }
 
-.product-list tr,.bill tr {
+#product-list tr,#bill tr {
  border-bottom: 1px solid #dddddd;
 }
 
-.product-list td{
+#product-list td{
  font-family: Verdana, sans-serif;
  text-align: center;
  font-size: 18pt;
  padding-left: 25px;
 }
 
-.product-list tr:nth-of-type(even),.bill tr:nth-of-type(even){
+#product-list tr:nth-of-type(even),#bill tr:nth-of-type(even){
  background-color: #f3f3f3;
 }
 
-.product-list tr:last-of-type {
+#product-list tr:last-of-type {
  border-bottom: 2px solid #046d04;
 }
 
-.product-list img{
+#product-list img{
  float:left;
  
  width: 90px;
  height: 90px;
 }
 
-.product-list button{
+#product-list button{
  
  background-color: white;
  color: black;
@@ -150,7 +150,7 @@ body{
  font-size: 15pt;
 }
 
-.product-list button:hover{
+#product-list button:hover{
  background-color: #046d04;
  color: white;
  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -167,8 +167,8 @@ body{
     width: 33%;
     height: 40%;
  
-    margin-right: 5%;
-    margin-top: 5%;
+    margin-right: 3%;
+    margin-top: 10%;
 
     padding-top: 0%;
     padding-left: 2%;
@@ -181,7 +181,7 @@ body{
  font-weight: bold;
 }
 
-.bill {
+#bill {
  border-collapse: collapse;
  font-size: 20pt;
  width: 80%;
@@ -189,17 +189,17 @@ body{
  margin: 5%;
 }
 
-.bill td{
+#bill td{
  font-family: Verdana, sans-serif;
  text-align: left;
  font-size: 18pt;
  padding: 20px;
 }
-.bill tr:last-of-type {
+#bill tr:last-of-type {
   border-top: 2px solid black;
   border-bottom: 3px solid black;
  }
- @media (max-width:1380px){
+ @media (max-width:1450px){
 
     .total{
      height: fit-content;
@@ -223,7 +223,7 @@ body{
         
     }
  }
- @media (max-width:650px){
+ @media (max-width:805px){
     .listing{
         float: none;
         position: relative;
@@ -231,35 +231,36 @@ body{
         
     }
     
-
-    .product-list thead{
+    #product-list thead{
         display: none;
        }
 
-    .product-list,.product-list tbody,.product-list tr, .product-list td {
+       #product-list,#product-list tbody,#product-list tr, #product-list td {
         display: block;
         width: 100%;
     }
-    .product-list tr{
+    #product-list tr{
         padding-bottom: 2%;
     }
-    .product-list img{
+    #product-list img{
         float:none;
     }
     
-    .product-list tbody tr td{
+    #product-list tbody tr td{
+        font-size: 80%;
         text-align: right;
         padding-right: 50px;
         position: relative;
         border: 1px solid #000000;
     }
-    .product-list tr:last-of-type {
+    #product-list tr:last-of-type {
         border-bottom: none;
        }
        
 
-    .product-list td:before{
+    #product-list td:before{
         content: attr(data-label);
+       
         position: absolute;
         left: 0;
         width: 50%;
@@ -268,6 +269,12 @@ body{
         text-align: left;
     }
  }
+ @media (max-width:600px){
+    #product-list tbody tr td{
+        font-size: 65%;
+    }
+ }
+
  @media (max-width:799px){
   #navbar{
       display: flex;
@@ -318,9 +325,10 @@ body{
   }
  
  }
- 
+
  @media (max-width: 477px) {
-  #header {
-      padding: 10px 30px;
-  }
+    #header {
+        padding: 10px 30px;
+    }
+  
  }
