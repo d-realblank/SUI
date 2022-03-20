@@ -41,6 +41,7 @@ function doShowAll() {
 	var list = "<tr><th>Item</th><th>#</th><th>weight (lb)</th><th>price ($)</th></tr>\n";
 	var i = 0;
 	for (i = 0; i <= localStorage.length-1; i++) {
+		alert(key);
 		key = localStorage.key(i);
 		if (key==Potatoe){
 			p = 3.49;
