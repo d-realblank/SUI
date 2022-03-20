@@ -4,7 +4,7 @@ function SaveItem() {
 	var name2 = document.forms.ShoppingList.name.value;
 	var data2 = document.forms.ShoppingList.data.value;
 	localStorage.setItem(name2, data2);
-	doShowAll(arguments[0],arguments[1]);
+	doShowAll();
 	
 }
 //------------------------------------------------------------------------------
@@ -19,19 +19,19 @@ function ModifyItem() {
 			}
 		
 	
-	doShowAll(arguments[0],arguments[1]);
+	doShowAll();
 }
 //-------------------------------------------------------------------------
 function RemoveItem() {
 	var name = document.forms.ShoppingList.name.value;
 	document.forms.ShoppingList.data.value = localStorage.removeItem(name);
-	doShowAll(arguments[0],arguments[1]);
+	doShowAll();
 }
 //-------------------------------------------------------------------------------------
 //restart the local storage
 function ClearAll() {
 	localStorage.clear();
-	doShowAll(arguments[0],arguments[1]);
+	doShowAll();
 }
 //-------------------------------------------------------------------------------------
 function doShowAll() {
@@ -40,6 +40,7 @@ function doShowAll() {
 	var p=0;
 	var list = "<tr><th>Item</th><th>#</th><th>weight (lb)</th><th>price ($)</th></tr>\n";
 	var i = 0;
+	alert(key);
 	for (i = 0; i <= localStorage.length-1; i++) {
 		alert(key);
 		key = localStorage.key(i);
@@ -50,7 +51,8 @@ function doShowAll() {
 			p = 4.99;
 		}
 		if (key==Apple){
-			p = 7.99;			}
+			p = 7.99;		
+		}
 		list += "<tr><td>" + key + "</td><td>\n"
 			+ localStorage.getItem(key) + "</td>"+"<td>" + localStorage.getItem(key)*w + "</td><td>"
 			+ localStorage.getItem(key)*p + "</td></tr>\n";

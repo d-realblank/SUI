@@ -37,7 +37,7 @@ img {
   height: auto;
 }
     </style>
-<body onload="doShowAll(5,4.99)">
+<body onload="doShowAll()">
     <ul id="navbar">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
@@ -60,9 +60,9 @@ img {
 
 				<tr>
 					<td>
-					    <input type=button value="Save"   onclick="SaveItem(5,4.99)"> 
-					    <input type=button value="Update" onclick="ModifyItem(5,4.99)"> 
-					    <input type=button value="Delete" onclick="RemoveItem(5,4.99)">
+					    <input type=button value="Save"   onclick="SaveItem()"> 
+					    <input type=button value="Update" onclick="ModifyItem()"> 
+					    <input type=button value="Delete" onclick="RemoveItem()">
 					</td>
 				</tr>
 			</table>
@@ -72,7 +72,7 @@ img {
 			<h3>more details</h3>
 			<table id=list></table>
 			<p>
-				<label><input type=button value="Clear" onclick="ClearAll(5,4.99)">
+				<label><input type=button value="Clear" onclick="ClearAll()">
 					<i>* Delete all items</i></label>
 			</p>
 		</div>
