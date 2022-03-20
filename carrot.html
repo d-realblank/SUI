@@ -36,6 +36,28 @@ img {
   max-width: 500px;
   height: auto;
 }
+button{
+        float: left;
+        float: top;
+        position:relative;
+        width: 198px;
+    }
+    button ul{
+        display: none;
+        position:absolute;
+        background-color: rgb(172, 172, 172);
+        padding: 0;
+        float: left;
+        border-radius: 0px 0px 4px 4px ;
+    }
+    button:hover ul{
+        display:block;
+    }
+    button ul li{
+        padding: 5px;
+        text-align: left;
+        width: 180px;
+    }
     </style>
 <body onload="doShowAll()">
     <ul id="navbar">
@@ -69,7 +91,7 @@ img {
 		
 
 		<div id="items_table">
-			<h3>more details</h3>
+			<h3>Cart details</h3>
 			<table id=list></table>
 			<p>
 				<label><input type=button value="Clear" onclick="ClearAll()">
@@ -78,6 +100,17 @@ img {
 		</div>
     </div>
 	</form>
+    <button>
+        items description
+        <ul>
+            <li>
+                5 lbs bag of Carrots
+            </li>
+            <li>
+                $4.99
+            </li>
+        </ul>
+    </button>
 	<img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" alt="">
 
 
