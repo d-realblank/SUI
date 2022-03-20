@@ -139,11 +139,12 @@ body{
 
 /*Home page*/
 #lure{
-    background-image: url("img/background.png");
+    background-image: url("img/bg.jpg");
     height: 90vh;
-    width: 100%;
-    background-size: auto;
-    background-position: top 25% right 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-position: top 25% right 0;*/
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -160,15 +161,19 @@ body{
 }
 
 #lure button{
-    background-color: white;
+    background-color: #088178;
     text-decoration: none;
-    color: #088178;
     border: 0;
     padding: 14px 60px;
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+}
+
+#lure button a{
+    text-decoration: none;
+    color: #e1e1e1;
 }
 
 #lure button:hover{
@@ -247,7 +252,6 @@ footer .pay .row i{
 /*Profile Editor page*/
 #page-header{
     background-image: url("img/twilight_sunset_beach_landscape_4000x2500_4000x2500.jpg");
-    width: 100%;
     height: 20vh;
     background-size: cover;
     background-position: 0 -50px;
