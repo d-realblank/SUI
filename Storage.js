@@ -40,7 +40,6 @@ function doShowAll() {
 	var p=0;
 	var list = "<tr><th>Item</th><th>#</th><th>weight (lb)</th><th>price ($)</th></tr>\n";
 	var i = 0;
-	alert(key);
 	for (i = 0; i <= localStorage.length-1; i++) {
 		alert(key);
 		key = localStorage.key(i);
