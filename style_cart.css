@@ -2,10 +2,59 @@
 
 *{
     box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color:#222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color:#3fa59c;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 35px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+.bi-person-circle{
+    font-size: 20px;
+}
+
+.bi-bag {
+    font-size: 20px;
+}
+
+.bi-shop {
+    font-size: 40px;
+    color: #3b3b3b;
 }
    
 body{
-    font-family: Verdana, sans-serif;
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -23,6 +72,7 @@ body{
  background-color: aliceblue;
  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
  position: sticky;
+ z-index: 1;
  top: 0;
  left: 0;
 }
@@ -199,6 +249,62 @@ body{
   border-top: 2px solid black;
   border-bottom: 3px solid black;
  }
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: whitesmoke;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+footer .bi-shop{
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin: 0 0 8px 0;
+}
+
+footer .follow{
+    margin-top: 15px;
+}
+
+footer .follow i{
+    color: #465b54;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+footer .pay .row i{
+    font-size: 20px;
+}
+
  @media (max-width:1450px){
 
     .total{

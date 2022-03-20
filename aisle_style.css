@@ -4,6 +4,12 @@
     background-color: whitesmoke;
 }
 
+#aisle1 .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
 
 #aisle1 .pro{
     width: 23%;
@@ -41,4 +47,21 @@
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 14px;
+}
+
+
+@media (max-width:799px){
+    #aisle1 .container{
+        justify-content: center;
+    }
+    
+    #aisle1 .pro{
+        margin: 15px;
+    }
+}
+
+@media (max-width: 477px){
+    #aisle1 .pro{
+        width: 100%;
+    }
 }
