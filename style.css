@@ -312,9 +312,32 @@ footer .pay .row i{
 }
 #user_list table{
     border: #a39f9f;
-    width: 50%;
-    height: 50vh;
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
 }
+*           {position: relative;}
+#userlist td, th{
+    padding-left: 8px;
+}
+
+#user_list thead, tr{
+    height: 60px;
+    font-size: 16px;
+}
+
+#userlist tbody tr{
+    height: 48px;
+    border-bottom: 1px solid #E3F1D5;
+}
+
+
 
 #user_list table thead{
     background-color: #a39f9f;
@@ -328,7 +351,7 @@ footer .pay .row i{
 }
 
 #user_list table td{
-    padding: 15px;
+    padding: 10px;
 }
 
 #user_list button{
@@ -405,6 +428,9 @@ footer .pay .row i{
     #form-details form{
         width: 50%;
     }
+
+    /*User List*/
+    
 }
 
 @media (max-width: 477px) {
