@@ -44,13 +44,13 @@ function doShowAll() {
 	for (i = 0; i <= localStorage.length-1; i++) {
 		alert(key);
 		key = localStorage.key(i);
-		if (key==Potatoe){
+		if (key=="Potatoe"){
 			p = 3.49;
 		}
-		if (key==Carrot){
+		if (key=="Carrot"){
 			p = 4.99;
 		}
-		if (key==Apple){
+		if (key=="Apple"){
 			p = 7.99;		
 		}
 		list += "<tr><td>" + key + "</td><td>\n"
