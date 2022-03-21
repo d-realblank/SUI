@@ -215,7 +215,7 @@ body{
 .total{
     float: right;
     width: 33%;
-    height: 40%;
+    height: 500px;
  
     margin-right: 3%;
     margin-top: 10%;
@@ -229,6 +229,7 @@ body{
 .total h1{
  padding-left: 8%;
  font-weight: bold;
+ font-size: 200%;
 }
 
 #bill {
