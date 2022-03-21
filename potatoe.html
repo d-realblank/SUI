@@ -1,19 +1,11 @@
 <!DOCTYPE HTML>
 <head>
-    <title>HTML5 Local Storage Project</title>
-    <META charset="UTF-8">
-    <META name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <META NAME='rating' CONTENT='General' />
-    <META NAME='expires' CONTENT='never' />
-    <META NAME='language' CONTENT='English, EN' />
-    <META name="description" content="shopping cart project with HTML5 and JavaScript">
-    <META name="keywords" content="HTML5,CSS,JavaScript, html5 session storage, html5 local storage">
-    <META name="author" content="dcwebmakers.com">
     <script src="Storage.js"></script>
-<link rel="stylesheet" href="StorageStyle.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+<link rel="stylesheet" href="StorageStyle.css"
+ <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aisle_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>SUI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -32,11 +24,13 @@
 }
 
 img {
+  z-index: 1;
   width: 100%;
   max-width: 500px;
   height: auto;
 }
 button{
+	z-index: 2;
         float: left;
         float: top;
         position:relative;
@@ -60,13 +54,24 @@ button{
     }
     </style>
 <body onload="doShowAll()">
-    <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
-        <a href="#" id="close"><i class="bi bi-x"></i></a>
-    </ul>
+	  <section id="header">
+        <a id="logo" href="index.html"><i class="bi bi-shop"></i>SUI</a>
+        <div>
+            <ul id="navbar">
+              
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="aisle.html">Aisles</a>
+              </li><li><a href="backstore.html">Backstore</a></li>
+              <li><a href="myaccount.html">Login</a></li>
+              <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
+              <a href="#" id="close"><i class="bi bi-x"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="bi bi-bag"></i></a>
+            <i id="bar" class="bi bi-list"></i>
+        </div>
+    </section>
        
     <form name=ShoppingList>
 
