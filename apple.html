@@ -37,6 +37,7 @@ img {
   height: auto;
 }
 button{
+	z-axis: 100;
         float: left;
         float: top;
         position:relative;
@@ -60,13 +61,24 @@ button{
     }
     </style>
 <body onload="doShowAll()">
-    <ul id="navbar">
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
-        <a href="#" id="close"><i class="bi bi-x"></i></a>
-    </ul>
+    <section id="header">
+        <a id="logo" href="index.html"><i class="bi bi-shop"></i>SUI</a>
+        <div>
+            <ul id="navbar">
+              
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active" href="aisle.html">Aisles</a>
+              </li><li><a href="backstore.html">Backstore</a></li>
+              <li><a href="myaccount.html">Login</a></li>
+              <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
+              <a href="#" id="close"><i class="bi bi-x"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="bi bi-bag"></i></a>
+            <i id="bar" class="bi bi-list"></i>
+        </div>
+    </section>
        
     <form name=ShoppingList>
 
