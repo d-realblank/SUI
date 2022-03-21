@@ -53,7 +53,7 @@ function doShowAll() {
 		}
 		list += "<tr><td>" + key + "</td><td>\n"
 			+ localStorage.getItem(key) + "</td>"+"<td>" + localStorage.getItem(key)*w + "</td><td>"
-			+ localStorage.getItem(key)*p + "</td></tr>\n";
+			+ localStorage.getItem(key)*p.toFixed(2) + "</td></tr>\n";
 	}
 	document.getElementById('list').innerHTML = list;
 	
