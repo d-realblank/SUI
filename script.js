@@ -1,4 +1,5 @@
 
+
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const nav = document.getElementById('navbar');
@@ -15,11 +16,14 @@ if (close){
     })
 }
 //add new key=>value to the HTML5 storage
-function SaveItem(a,b) {	
-	var name2 = a;
-	var data2 = b;
+function SaveItem(a,b,c,d) {	
+	var name = a;
+	var quantity = b;
+	var price = c;
+	var img = d;
 	if(b>0&&(b%1==0)){
-	localStorage.setItem(name2, data2);
+	var data = [quantity,price,img];	
+	localStorage.setItem(name,JSON.stringify(data));
 	}
 	else{
 		alert("please enter a positive integer")
@@ -77,4 +81,3 @@ function doShowAll() {
 	document.getElementById('list').innerHTML = list;
 	
 }
-

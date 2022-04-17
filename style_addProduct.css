@@ -99,7 +99,7 @@ body{
  margin: 25px;
  font-size: 20pt;
 }
-.form input[type=text], input[type=submit], textarea{
+.form input[type=text],.form input[type=number], input[type=submit], textarea{
  width: 95%;
  height: 40px;
  
@@ -110,7 +110,7 @@ body{
  border: 1px solid rgb(0, 0, 0);
  border-radius: 4px;
 }
-.form input[type=text]{
+.form input[type=text],.form input[type=number]{
  height: 5%;
  font-size: 15pt;
  border-radius: 2px;
@@ -130,7 +130,6 @@ body{
 .form input[type=submit]:hover {
  background-color: #45a049;
 }
-
 
 /*Media Query*/
 
