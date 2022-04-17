@@ -4,7 +4,7 @@
   if(isset($_POST['edit'])){
     $getID = $_POST["id"];
     
-    $result = mysqli_query($conn,"SELECT * FROM aisles");
+    $result = mysqli_query($conn,"SELECT * FROM aisle");
 
     while($row = mysqli_fetch_array($result)){
       if($row['id'] == $getID){
@@ -41,7 +41,7 @@
     $tempname = $_FILES["image"]["tmp_name"];    
     $folder = "img/".$filename;
 
-    $sql_insert = "INSERT INTO aisles (name,type,weight,price,description,image)
+    $sql_insert = "INSERT INTO aisle (name,type,weight,price,description,image)
           VALUES (?,?,?,?,?,?)";
 
     $stmt = mysqli_stmt_init($conn);
@@ -71,7 +71,7 @@
     $description= $_POST['description'];
     $id= $_POST['id'];
 
-    $sql_upatde = "UPDATE `aisles` SET name= '$name', type= '$type', price= $price, weight= $weight, description = '$description' WHERE id= $id;";
+    $sql_upatde = "UPDATE `aisle` SET name= '$name', type= '$type', price= $price, weight= $weight, description = '$description' WHERE id= $id;";
     $result = mysqli_query($conn, $sql_upatde);
 
     header("refresh:0.1; url=backstore.php");
@@ -86,25 +86,24 @@
 
 <body>
 
-  <section id="header">
-    <a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
+<section id="header">
+            <a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
 
-    <div>
-        <ul id="navbar">
-          
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aisle.html">Shop</a></li>
-          <li><a class="active" href="backstore.html">Inventory</a></li>
-          <li><a href="myaccount.html">Login</a></li>
-          <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
-          <a href="#" id="close"><i class="bi bi-x"></i></a>
-        </ul>
-    </div>
-    <div id="mobile">
-        <a href="cart.html"> <i class="bi bi-bag"></i></a>
-        <i id="bar" class="bi bi-list"></i>
-    </div>
-  </section>
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.php">Front Store</a></li>
+                    <li><a class="active" href="backstore.php">Inventory</a></li>
+                    <li><a href="user_list.php">User List</a></li>
+                    <li><a href="includes/logout.inc.php"></a>Logout</li>
+                    <li id="sh-bag"><a href="cart.php"> <i class="bi bi-bag"></i></a></li>
+                    <a href="#" id="close"><i class="bi bi-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.php"> <i class="bi bi-bag"></i></a>
+                <i id="bar" class="bi bi-list"></i>
+            </div>
+</section>
   
 
 <div class="add-page">

@@ -39,25 +39,38 @@
 </head>
 <script src="script.js"></script>
   <body>
-    <section id="header">
-      <a id="logo" href="index.html"><i class="bi bi-shop"></i>SUI</a>
-      <div>
-          <ul id="navbar">
-            
-            <li><a href="index.php">Home</a></li>
-            <li><a class="active" href="aisle.php">Shop</a>
-            </li><li><a href="backstore.html">Backstore</a></li>
-            <li><a href="myaccount.php">Login</a></li>
-            <li id="sh-bag"><a href="cart.php"> <i class="bi bi-bag"></i></a></li>
-            <a href="#" id="close"><i class="bi bi-x"></i></a>
-          </ul>
-      </div>
-      <div id="mobile">
-          <a href="cart.php"><i class="bi bi-bag"></i></a>
-          <i id="bar" class="bi bi-list"></i>
-      </div>
-    </section>
-    <section id="aisle1" class="section-p1">
+
+  <section id="header">
+            <a id="logo" href="index.php"><i class="bi bi-shop"></i>SUI</a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="active" href="shop.php">Shop</a></li>
+                    <?php
+                        if (isset($_SESSION["useremail"])) {
+                            echo "<li><a href='profile.php'>Sign up</a></li>";
+                            echo "<li><a href='includes/logout.inc.php'>Logout</a></li>";
+                        }
+                        else {
+                            echo "<li><a href='signup.php'>Sign up</a></li>";
+                            echo "<li><a href='myaccount.php'>Log in</a></li>";
+                        }
+                        if ($_SESSION["usertype"] === "admin") {
+                            echo "<li><a href='backstore.php'>Backstore</a></li>";
+                        }
+                    ?>
+                    <li id="sh-bag"><a href="cart.php"> <i class="bi bi-bag"></i></a></li>
+                    <a href="#" id="close"><i class="bi bi-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.php"> <i class="bi bi-bag"></i></a>
+                <i id="bar" class="bi bi-list"></i>
+            </div>
+  </section>
+
+  <section id="aisle1" class="section-p1">
       <h2>Fruits & Veggies</h2>
       <p>Only these for Now</p>
       <div class="container">
@@ -102,7 +115,7 @@
       ?>
        
       </div>
-    </section>
+  </section>
 
     <footer class="section-p1">
       <div class="col">
@@ -124,8 +137,14 @@
 
       <div class="col">
           <h4>My Account</h4>
-          <a href="#">Sign in</a>
-          <a href="#">View Cart</a>
+          <?php
+          
+              if (!isset($_SESSION["useremail"])) {
+                  echo "<a href='myaccount.php'>Sign in</a>";
+              }
+
+          ?>
+          <a href="cart.php">View Cart</a>
           <a href="#">My Wishlist</a>
           <a href="#">Track My Order</a>
       </div>

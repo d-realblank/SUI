@@ -35,6 +35,17 @@ p{
 }
 
 /*Change to auto to see the diff*/
+
+.current{
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 1px;
+}
+
 .section-p1{
     padding: 35px 80px;
 }
@@ -54,6 +65,34 @@ p{
 .bi-shop {
     font-size: 40px;
     color: #3b3b3b;
+}
+
+a.normal{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: #088178;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+a.danger{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: red;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
 }
 
 button.normal{

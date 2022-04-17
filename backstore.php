@@ -4,8 +4,8 @@
   if(isset($_POST['delete'])){
     $id = $_POST["id"];
     
-    $result = mysqli_query($conn,"SELECT * FROM aisles");
-			 $sql_upatde = "delete from `aisles` where id='$id'";
+    $result = mysqli_query($conn,"SELECT * FROM aisle");
+			 $sql_upatde = "delete from `aisle` where id='$id'";
     $result = mysqli_query($conn, $sql_upatde);
   }
 
@@ -22,24 +22,24 @@
 </head>
 
 <body>
-	<section id="header">
-		<a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
-		<div>
-						<ul id="navbar">
-										
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-										<li><a class="active" href="backstore.html">Backstore</a></li>
-          <li><a href="myaccount.html">Login</a></li>
-          <li id="sh-bag"><a href="cart.html"> <i class="bi bi-bag"></i></a></li>
-          <a href="#" id="close"><i class="bi bi-x"></i></a>	
-						</ul>
-		</div>
-		<div id="mobile">
-						<a href="cart.html"> <i class="bi bi-bag"></i></a>
-						<i id="bar" class="bi bi-list"></i>
-		</div>
-	</section>
+<section id="header">
+            <a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.php">Front Store</a></li>
+                    <li><a class="active" href="backstore.php">Inventory</a></li>
+                    <li><a href="user_list.php">User List</a></li>
+                    <li><a href="includes/logout.inc.php"></a>Logout</li>
+                    <li id="sh-bag"><a href="cart.php"> <i class="bi bi-bag"></i></a></li>
+                    <a href="#" id="close"><i class="bi bi-x"></i></a>
+                </ul>
+            </div>
+            <div id="mobile">
+                <a href="cart.php"> <i class="bi bi-bag"></i></a>
+                <i id="bar" class="bi bi-list"></i>
+            </div>
+</section>
 	
 <div class="backstore-content">
 	<h1>Product List:</h1>
@@ -58,7 +58,7 @@
 		</thead>
 		<tbody>
 		<?php
-		$result = mysqli_query($conn,"SELECT * FROM aisles");
+		$result = mysqli_query($conn,"SELECT * FROM aisle");
 
 		while($row = mysqli_fetch_array($result))
 				{
