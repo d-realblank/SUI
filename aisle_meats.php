@@ -73,7 +73,7 @@
       <p>Only these for Now</p>
       <div class="container">
       <?php
-	    $result = mysqli_query($conn,"SELECT * FROM aisles");
+	    $result = mysqli_query($conn,"SELECT * FROM aisle");
       $name= 'name0';
       $data= 'data0'; 
       while($row = mysqli_fetch_array($result))
