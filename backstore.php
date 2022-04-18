@@ -1,5 +1,9 @@
 <?php
-  require_once 'dbConfig.php'; 
+  require_once 'dbConfig.php';
+	
+	if ($_SESSION["usertype"] !== "admin") {
+		header("location: index.php");
+	}
 
   if(isset($_POST['delete'])){
     $id = $_POST["id"];
