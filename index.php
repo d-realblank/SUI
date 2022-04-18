@@ -73,7 +73,7 @@
             </div>
 
             <div class="col">
-            h4>My Account</h4>
+            <h4>My Account</h4>
                 <?php
                 
                     if (!isset($_SESSION["useremail"])) {
