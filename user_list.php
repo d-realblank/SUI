@@ -24,7 +24,7 @@
                     <li><a href="index.php">Front Store</a></li>
                     <li><a href="backstore.php">Inventory</a></li>
                     <li><a class="active" href="user_list.php">User List</a></li>
-                    <li><a href="includes/logout.inc.php"></a>Logout</li>
+                    <li><a href="includes/logout.inc.php">Logout</a></li>
                     <li id="sh-bag"><a href="cart.php"> <i class="bi bi-bag"></i></a></li>
                     <a href="#" id="close"><i class="bi bi-x"></i></a>
                 </ul>
