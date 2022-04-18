@@ -1,7 +1,8 @@
 <?php
+	session_start();
   require_once 'dbConfig.php';
 	
-	if ($_SESSION["usertype"] != "admin") {
+	if ($_SESSION["usertype"] !== "admin" || empty($_SESSION["usertype"])) {
 		header("location: index.php");
 	}
 
