@@ -17,7 +17,7 @@
     <body>
 
     <section id="header">
-            <a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
+            <a id="logo" href="index.php"><i class="bi bi-shop"></i>SUI</a>
 
             <div>
                 <ul id="navbar">
@@ -51,7 +51,7 @@
             <h2>Amazing value deals</h2>
             <h1>On all organic products</h1>
             <p>Save up to 50% off!</p>
-            <button class="normal"><a href="shop.html">Shop Now</a></button>
+            <button class="normal"><a href="shop.php">Shop Now</a></button>
         </section>
 
         <footer class="section-p1">

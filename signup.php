@@ -17,7 +17,7 @@
     <body>
 
     <section id="header">
-            <a id="logo" href="#"><i class="bi bi-shop"></i>SUI</a>
+            <a id="logo" href="index.php"><i class="bi bi-shop"></i>SUI</a>
 
             <div>
                 <ul id="navbar">
@@ -48,7 +48,7 @@
 
         <section id="page-header">
             <h2>REGISTER!</h2>
-            <p>Already have an account?<a href="login.html"> <b>Login </b></a> here.</p>
+            <p>Already have an account?<a href="myaccount.php"> <b>Login </b></a> here.</p>
         </section>
 
         <section id="form-details">
